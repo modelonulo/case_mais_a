@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 
 def index_images():
-    es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+    es = Elasticsearch("https://localhost:9200", http_auth=("elastic", "3Nud3ranVl6FEVS_CHKs"), verify_certs=False)
 
     # Metadados da imagem (para o MVP, manualmente definidos)
     imagem_metadados = {

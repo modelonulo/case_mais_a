@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 import pdfplumber
 
 def index_pdfs():
-    es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+    es = Elasticsearch("https://localhost:9200", http_auth=("elastic", "3Nud3ranVl6FEVS_CHKs"), verify_certs=False)
 
     # Função para extrair texto de um PDF
     def extract_text_from_pdf(pdf_path):
