@@ -1,6 +1,6 @@
 # Documentação Projeto de Aprendizagem Adaptativa
 
-Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos do usuário sobre o tema "Desenvolvimento de Sistemas PHP".
+Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos. Para este exemplo, indexei o conteúdo fornecido, mas trabalhei com a criação de conteúdo por uma LLMs usando o material do livro em pdf.
 
 ## Decisão da Arquitetura Utilizada
 
