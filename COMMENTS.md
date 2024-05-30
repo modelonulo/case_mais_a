@@ -1,6 +1,6 @@
 # Documentação Projeto de Aprendizagem Adaptativa
 
-Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos dos usuários. Para este exemplo, indexei o conteúdo fornecido e trabalhei com a criação de conteúdo por uma LLM usando o material do livro em PDF. No caso do vídeo, utilizaria modelos de linguagem visual, por exemplo.
+Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos dos usuários. Para este exemplo, indexei o vídeo, exercícios e um capítulo do livro. No entanto, devido ao tempo limitado, trabalhei apenas na criação de conteúdo usando uma LLM com o material do capítulo do livro em PDF. Limitei-me a uma única interação com a API para geração de conteúdo baseado na dificuldade do usuário, apenas como um exemplo para o case. Se fosse abordar o vídeo, poderia usar o texto transcrito do vídeo ou utilizar modelos de linguagem visual, dependendo das especificações.
 
 
 
