@@ -1,6 +1,8 @@
 # Documentação Projeto de Aprendizagem Adaptativa
 
-Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos. Para este exemplo, indexei o conteúdo fornecido, mas trabalhei com a criação de conteúdo por uma LLMs usando o material do livro em pdf. No caso do vídeo, usaria Visual Language Models, por exemplo.
+Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos dos usuários. Para este exemplo, indexei o conteúdo fornecido e trabalhei com a criação de conteúdo por uma LLM usando o material do livro em PDF. No caso do vídeo, utilizaria modelos de linguagem visual, por exemplo.
+
+
 
 ## Decisão da Arquitetura Utilizada
 
@@ -63,17 +65,17 @@ Indexação de Dados:
 
 Elasticsearch: O uso do Elasticsearch para indexação de dados textuais, PDFs, vídeos e imagens garante uma busca rápida e eficiente. No entanto, a performance da indexação pode ser afetada pelo tamanho e complexidade dos dados. Para grandes volumes de dados, o processo de indexação pode se tornar mais demorado. Dessa forma, outros frameworks poderiam ser considerados dependendo das necessidades do cliente.
 Scripts de Indexação: Os scripts de indexação foram desenvolvidos para serem executados sequencialmente. Em um ambiente de produção, esses scripts poderiam ser paralelizados para melhorar a performance.
-Geração de Conteúdos Dinâmicos:
 
+Geração de Conteúdos Dinâmicos:
 OpenAI GPT-3: A geração de conteúdos dinâmicos utilizando o GPT-3 da OpenAI oferece respostas de alta qualidade, mas a latência pode ser um fator limitante. Cada chamada à API da OpenAI pode levar alguns segundos para retornar uma resposta.
 Flask API: A API criada com Flask é simples e eficiente para um pequeno número de usuários, mas pode precisar de melhorias para lidar com um tráfego mais intenso.
+
 Capacidade de Escalabilidade:
 A capacidade de escalar o sistema depende de vários fatores, incluindo a infraestrutura utilizada e as otimizações implementadas.
-
 Elasticsearch: O Elasticsearch pode ser escalado horizontalmente adicionando mais nós ao cluster. Isso permite lidar com maiores volumes de dados e tráfego de busca, melhorando a performance e a resiliência do sistema.
 Flask API: A API Flask pode ser escalada horizontalmente utilizando servidores de aplicação como Gunicorn ou UWSGI e um balanceador de carga para distribuir as requisições entre múltiplas instâncias.
-Otimização de Performance:
 
+Otimização de Performance:
 Caching: Implementar caching para resultados de busca e respostas geradas pode reduzir a carga no Elasticsearch e no OpenAI, melhorando a latência e a capacidade de resposta do sistema.
 Contexto nos Modelos: Implementar features que possibilitem o uso de contexto pelos modelos.
 Ferramentas Adicionais: Considerar o uso adicional de outras ferramentas para otimizar o trabalho, como Langchain e outros.
