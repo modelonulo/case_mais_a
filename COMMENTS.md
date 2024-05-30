@@ -1,6 +1,6 @@
 # Documentação Projeto de Aprendizagem Adaptativa
 
-Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos. Para este exemplo, indexei o conteúdo fornecido, mas trabalhei com a criação de conteúdo por uma LLMs usando o material do livro em pdf.
+Este projeto visa criar um sistema de aprendizagem adaptativa utilizando um conjunto de dados relacionados aos fundamentos de programação. O objetivo é indexar diferentes tipos de dados e desenvolver um prompt que gere conteúdos dinâmicos conforme as dificuldades e desconhecimentos. Para este exemplo, indexei o conteúdo fornecido, mas trabalhei com a criação de conteúdo por uma LLMs usando o material do livro em pdf. No caso do vídeo, usaria Visual Language Models, por exemplo.
 
 ## Decisão da Arquitetura Utilizada
 
@@ -8,7 +8,7 @@ Optei por uma arquitetura simples apenas para exemplo a nível deste case, compo
 
 - **Elasticsearch**: Para indexar e buscar os dados textuais, PDFs, vídeos e imagens.
 - **Python com Flask**: Para criar uma API que serve como backend do sistema.
-- **OpenAI GPT-3**: Para gerar conteúdos explicativos dinâmicos com base nos dados indexados.
+- **OpenAI GPT 4o**: Para gerar conteúdos explicativos com base nos dados indexados.
 - **Docker**: Para executar o Elasticsearch localmente, garantindo um ambiente controlado e facilmente replicável.
 
 Essa arquitetura foi escolhida para garantir escalabilidade, facilidade de implementação e eficiência na busca e geração de conteúdos dinâmicos, mas é apenas um exemplo.
@@ -50,8 +50,7 @@ docker run --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300 -e "disc
 #### Instale as dependências do Python:
 pip install -r requirements.txt
 #### Configure a chave de API do OpenAI:
-No terminal, execute:
-export sua_chave_da_openai
+No terminal, execute antes de rodar: export OPENAI_API_KEY=“sua_chave_da_openai” 
 #### Execute o script principal:
 python main.py
 
