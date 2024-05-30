@@ -1,9 +1,7 @@
 import json
-from elasticsearch import Elasticsearch
+from config import es
 
 def index_texts():
-    es = Elasticsearch("https://localhost:9200", http_auth=("elastic", "3Nud3ranVl6FEVS_CHKs"), verify_certs=False)
-
     # Caminho para o arquivo JSON
     json_path = 'Exercícios.json'
 

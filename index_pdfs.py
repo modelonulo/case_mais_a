@@ -1,9 +1,7 @@
-from elasticsearch import Elasticsearch
 import pdfplumber
+from config import es
 
 def index_pdfs():
-    es = Elasticsearch("https://localhost:9200", http_auth=("elastic", "3Nud3ranVl6FEVS_CHKs"), verify_certs=False)
-
     # Função para extrair texto de um PDF
     def extract_text_from_pdf(pdf_path):
         with pdfplumber.open(pdf_path) as pdf:
@@ -11,7 +9,7 @@ def index_pdfs():
         return text
 
     # Caminho para o PDF
-    pdf_path = 'case_mais_a/Capítulo do Livro.pdf'
+    pdf_path = 'livro.pdf'
 
     # Extração e indexação
     pdf_text = extract_text_from_pdf(pdf_path)

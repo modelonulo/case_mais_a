@@ -1,10 +1,8 @@
 import ffmpeg
 import speech_recognition as sr
-from elasticsearch import Elasticsearch
+from config import es
 
 def index_videos():
-    es = Elasticsearch("https://localhost:9200", http_auth=("elastic", "3Nud3ranVl6FEVS_CHKs"), verify_certs=False)
-
     # Extração de áudio do vídeo
     def extract_audio_from_video(video_path, audio_path):
         ffmpeg.input(video_path).output(audio_path).run(overwrite_output=True)
