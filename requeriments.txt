@@ -1,0 +1,7 @@
+elasticsearch==8.0.0
+Flask==2.0.2
+pdfplumber==0.5.28
+openai==0.27.0
+ffmpeg-python==0.2.0
+speechrecognition==3.8.1
+urllib3==1.26.7
