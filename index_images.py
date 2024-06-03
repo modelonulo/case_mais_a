@@ -1,8 +1,6 @@
-from elasticsearch import Elasticsearch
+from config import es
 
 def index_images():
-    es = Elasticsearch("https://localhost:9200", http_auth=("elastic", "3Nud3ranVl6FEVS_CHKs"), verify_certs=False)
-
     # Metadados da imagem (para o MVP, manualmente definidos)
     imagem_metadados = {
         'filename': 'Infografico-1.jpg',
